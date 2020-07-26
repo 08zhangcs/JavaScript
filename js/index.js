@@ -1,34 +1,43 @@
 " use strict "; //严格模式
 
-const divDom = document.getElementById('table-data-warp'); // 获取ID
-const tableDom = document.createElement('table');//创建DOM元素
+const divDom = window.Afun.$('table-data-warp'); 
+const tableDom = window.Afun.createEl('table');//创建DOM元素
+
+window.Afun.setAtter(tableDom, {
+    'width':'80%',
+    'border':'0',
+    'cellpadding':'0',
+    'csllspacing':'0',
+    'rules':'none',
+    'id':'table-data-warp'
+});
+
+// window.Afun.getAttr(tableDom, 'id')// 获取属性
 
 
-tableDom.setAttribute('width','80%'); //setAttribute 设置属性
-tableDom.setAttribute('border','0');
-tableDom.setAttribute('cellpadding','0');
-tableDom.setAttribute('csllspacing','0');
-tableDom.setAttribute('id','table-data-warp');
-tableDom.setAttribute('rules','none');
+//表头数据
+let theadHtml= `<thead><tr>`; 
+// forEach((item, index, arr)   es6语法
+tableTheData.forEach((item) =>{
+    // 检测是否有width
+    let width = item.width ? ` width= "${item.width}"` : '';
+    // 检测是否有id
+    let id = item.id ? ` id= "${item.id}"` : '';
+    // 字符串拼接
+    theadHtml +=`<th${width}${id}>${item.label}</th>`;
+})
+theadHtml += `</tr></thead>`;
 
-tableDom.getAttribute('id'); // 获取属性
 
+/*
+    列表数据
+* */
+let tbodyHtml =  `<tbody>`;
+tbodyHtml += `${creatTbodyData()}</tbody>`;
 
-tableDom.innerHTML = `<thead>
-                        <tr>
-                            <th>头像</th>
-                            <th>姓名</th>
-                            <th>性别</th>
-                            <th>年龄</th>
-                            <th>手机号</th>
-                            <th>国籍</th>
-                            <th width= "200">爱好</th>
-                            <th>头衔</th>
-                            <th>操作</th>
-                        </tr>
-                    </thead>`
+// 生成表头
+tableDom.innerHTML = theadHtml + tbodyHtml;
 
-console.log(tableDom)
 
 divDom.appendChild(tableDom);
 

@@ -16,7 +16,7 @@ body{
  
 #container-warp{
     width: 80%;
-    margin: 10% auto 20px;
+    margin: 6% auto 20px;
 }
 
 .clearfix{
@@ -72,3 +72,110 @@ body{
 }
 
 
+/* tbody */
+#table-data-warp table tbody tr{
+    height: 80px;
+}
+#table-data-warp table tbody tr td>div{
+    text-align: center;
+}
+.face{
+    position: relative;
+    width: 40px;
+    margin: auto;
+}
+.face .gender{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.face img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.people-name .name{
+    font-size: 14px;
+    color: white;
+}
+.people-name .nickname{
+    font-size: 10px;
+}
+.gender{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.icon-girl{
+    background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595592026861&di=533ad907e08a5ca6e2e9e8339608e6d8&imgtype=0&src=http%3A%2F%2Fpic119.nipic.com%2Ffile%2F20161226%2F23353563_175220217000_2.jpg);
+    background-size: 50px;
+    background-position: -28px 23px;
+}
+.icon-boy{
+    background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595592026861&di=533ad907e08a5ca6e2e9e8339608e6d8&imgtype=0&src=http%3A%2F%2Fpic119.nipic.com%2Ffile%2F20161226%2F23353563_175220217000_2.jpg);
+    background-size: 50px;
+    background-position: -7px 23px;
+}
+.option-05{
+    opacity: 0.5;
+}
+
+.country img{
+    height: 40px;
+}
+.age p{
+    font-size: 14px;
+    color: white;
+}
+.phone{
+    color: white;
+    font-size: 14px;
+}
+
+.country img{
+    height: 30px;
+}
+
+
+.likes span{
+    padding: 0px 5px;
+    margin: 0px 5px 5px 0;
+    display: inline-block;
+    line-height: 20px;
+    border-radius: 2px;
+}
+.grade-wrap{
+    background-position: 0px -21px !important;
+}
+.grade .icon-grade{
+    background: url(../img/star.png) no-repeat;
+    background-size: 100px;
+    width: 100px;
+    height: 21px;
+    margin: auto;
+}
+
+
+.grade-hight{
+    float: left;
+}
+
+.operation a{
+    text-decoration: none;
+    color: white;
+}
+
+.operation>a{
+    background-color: rgb(117, 116, 117);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+.operation .likes{
+    display: none;
+}
+
+.active{
+    display: block;
+}
