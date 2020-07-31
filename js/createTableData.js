@@ -1,8 +1,3 @@
-// 头部生成
-// function creatThead() {
-    
-// }
-
 
 
 
